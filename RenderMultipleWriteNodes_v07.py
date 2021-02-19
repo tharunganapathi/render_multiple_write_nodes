@@ -26,3 +26,4 @@ def RenderMultipleNodes():
             render_information.append(nodes)
             nuke.display('showChannels()', node, 'Render_Information')
 
+nuke.menu('Nodes').addMenu('RenderMultipleNodes',icon = 'Render.png').addCommand('Render selected Write nodes', RenderMultipleNodes, icon = 'ProjectionSolver.png')

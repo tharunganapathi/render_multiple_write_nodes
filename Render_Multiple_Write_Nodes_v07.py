@@ -1,13 +1,14 @@
 import nuke
+render_information = []
+def showChannels():
+    global render_information
+    return '\n'.join(render_information)
+
 def RenderMultipleNodes():
+    global render_information
     render_information = []
-    
-    def showChannels():
-        return '\n'.join(render_information)
-    
-    
+
     node = nuke.toNode('Write1') #Just for avoiding error. It will not use while running the code
-    
     
     for i in nuke.selectedNodes():
         
